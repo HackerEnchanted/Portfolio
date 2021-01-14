@@ -1,3 +1,16 @@
+setTimeout(function () {
+  $(".loader_bg").fadeToggle();
+}, 1500);
+window.addEventListener("load", () => {
+  const params = new URL(document.location).searchParams;
+  const name = params.get("Name");
+  const email = params.get("Email");
+  const project = params.get("Project-desc");
+
+  document.getElementById("result-name").innerHTML = name;
+  document.getElementById("result-email").innerHTML = email;
+  document.getElementById("result-proj").innerHTML = project;
+});
 $(document).ready(function () {
   $(window).scroll(function () {
     if (this.scrollY > 50) {
@@ -5,7 +18,7 @@ $(document).ready(function () {
     } else {
       $(".navbar").removeClass("sticky");
     }
-    if (this.scrollY > 500) {
+    if (this.scrollY > 200) {
       $(".scroll-up-btn").addClass("show");
     } else {
       $(".scroll-up-btn").removeClass("show");
@@ -25,37 +38,15 @@ $(document).ready(function () {
 
   //typed script
   var typed = new Typed(".typing", {
-    strings: ["Web Developer", "Ethical Hacker", "Designer"],
+    strings: ["Web Developer", "Gamer", "Designer"],
     typeSpeed: 50,
     backSpeed: 60,
     loop: true,
   });
   var typed = new Typed(".typing-2", {
-    strings: ["Web Developer", "Ethical Hacker", "Designer"],
+    strings: ["Web Developer", "Gamer", "Designer"],
     typeSpeed: 50,
     backSpeed: 60,
     loop: true,
-  });
-
-  // owl carousel script
-  $(".carousel").owlCarousel({
-    margin: 20,
-    loop: true,
-    autoplayTimeOut: 2000,
-    autoplayHoverPause: true,
-    responsive: {
-      0: {
-        items: 1,
-        nav: false,
-      },
-      600: {
-        items: 2,
-        nav: false,
-      },
-      1000: {
-        items: 3,
-        nav: false,
-      },
-    },
   });
 });

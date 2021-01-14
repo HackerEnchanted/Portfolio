@@ -22,19 +22,29 @@
       integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ=="
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
-      integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
-      crossorigin="anonymous"
-    />
   </head>
   <body>
+    <aside class="social">
+      <a href="https://www.instagram.com">
+        <img
+          src="./images/instagram.svg"
+          alt=""
+          class="insta"
+          height="30px"
+          width="30px"
+      /></a>
+      <a href="https://twitter.com"
+        ><img src="./images/twitter.svg" alt="" height="30px" width="30px"
+      /></a>
+      <a href="https://github.com"
+        ><img src="./images/github.svg" alt="" height="30px" width="30px"
+      /></a>
+    </aside>
+    <!-- Loader -->
+    <div class="loader_bg">
+      <div class="loader"></div>
+    </div>
+    <!-- SCroll -->
     <div class="scroll-up-btn">
       <i class="fas fa-angle-up"></i>
     </div>
@@ -49,7 +59,7 @@
           <li><a href="#about" class="menu-btn">About</a></li>
           <li><a href="#services" class="menu-btn">Services</a></li>
           <li><a href="#skills" class="menu-btn">Skills</a></li>
-          <li><a href="#teams" class="menu-btn">Teams</a></li>
+
           <li><a href="#contact" class="menu-btn">Contact</a></li>
         </ul>
         <div class="menu-btn">
@@ -65,7 +75,7 @@
           <div class="text-1">Hi, I'm</div>
           <div class="text-2">Santhosh Pai</div>
           <div class="text-3">I'm a <span class="typing"></span></div>
-          <a href="#">Hire Me!</a>
+          <a href="#name-form">Hire Me!</a>
         </div>
       </div>
     </section>
@@ -83,10 +93,11 @@
               I'm Santhosh and I'm a <span class="typing-2"></span>
             </div>
             <p>
-              I like to design Website during Daytime and Hack at Night. Have my
-              B.E Degree in Mechanical Engineering but want to be an Ethical
-              Hacker.Have been preparing for my OSCP certification to get
-              certified as an Hacker.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+              asperiores laborum natus autem sed, ipsa sit aperiam aspernatur
+              architecto odio, excepturi qui hic perferendis assumenda dolores
+              numquam non, accusamus soluta sunt blanditiis? Corporis,
+              voluptatem voluptate?
             </p>
             <a href="#">Download CV <i class="fas fa-file"></i></a>
           </div>
@@ -190,64 +201,7 @@
         </div>
       </div>
     </section>
-    <!-- TEAMS SECTION -->
-    <section class="teams" id="teams">
-      <div class="max-width">
-        <h2 class="title">My Teams</h2>
-        <div class="carousel owl-carousel">
-          <div class="card">
-            <div class="box">
-              <img src="images/profile-2.jpg" alt="" />
-              <div class="text">Reza Biazar</div>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde,
-                modi.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <img src="images/profile-3.jpg" alt="" />
-              <div class="text">Jake Fagan</div>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde,
-                modi.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <img src="images/profile-4.jpg" alt="" />
-              <div class="text">Jason Grove</div>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde,
-                modi.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <img src="images/profile-5.jpg" alt="" />
-              <div class="text">Patrik Velich</div>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde,
-                modi.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <img src="images/profile-6.jpg" alt="" />
-              <div class="text">Amy Hirschi</div>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde,
-                modi.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
     <!-- CONTACT SECTION -->
     <section class="contact" id="contact">
       <div class="max-width">
@@ -285,22 +239,39 @@
           </div>
           <div class="column right">
             <div class="text">Message Me</div>
-            <form action="#">
+            <form action="./result.html" id="name-form" method="GET">
               <div class="fields">
                 <div class="field name">
-                  <input type="text" placeholder="Enter your Name" required />
+                  <input
+                    id="user-name"
+                    type="text"
+                    name="Name"
+                    placeholder="Enter your Name"
+                    required
+                  />
                 </div>
                 <div class="field email">
-                  <input type="email" placeholder="Enter your Email" required />
+                  <input
+                    id="user-mail"
+                    type="email"
+                    name="Email"
+                    placeholder="Enter your Email"
+                    required
+                  />
                 </div>
               </div>
               <div class="field">
-                <input type="text" placeholder="Subject" required />
+                <input
+                  id="user-text"
+                  type="text"
+                  placeholder="Subject"
+                  required
+                />
               </div>
               <div class="field textarea" required>
                 <textarea
-                  name=""
-                  id=""
+                  name="Project-desc"
+                  id="Project-desc"
                   cols="50"
                   rows="20"
                   placeholder="Describe the Project..."
@@ -316,13 +287,21 @@
     </section>
 
     <footer>
-      <div class="social">
-        <a href="www.instgram.com/clasher-santy"
-          ><i class="far fa-instagram"></i
-        ></a>
-
-        <i class="far fa-twitter"></i>
-        <i class="far fa-facebook"></i>
+      <div class="social-footer">
+        <a href="https://www.instagram.com">
+          <img
+            src="./images/instagram.svg"
+            alt=""
+            class="insta"
+            height="30px"
+            width="30px"
+        /></a>
+        <a href="https://twitter.com"
+          ><img src="./images/twitter.svg" alt="" height="30px" width="30px"
+        /></a>
+        <a href="https://github.com"
+          ><img src="./images/github.svg" alt="" height="30px" width="30px"
+        /></a>
       </div>
       <span
         >Created by <a href="#">Santhosh Pai</a>
